@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <style>
+        #cartas{
+            position: absolute;
+			top: 35%;
+			bottom: 0vh;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+            width: 1200px;
+        }
+        h1{
+            background-color: #E0EEEE;
+			color: black;
+			padding: 15px;
+			margin-top: 1vh;
+        }
+        .row{
+            margin-bottom: 2vh;
+        }
+        img{
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        img:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div align="center">
+        <h1>Jogo da Memoria</h1>
+    </div>
+
+    <div class="container" id="cartas" align="center">
+        <div class="row">
+            <div class="col">
+                <img src="fundo.jpg" id="squirtle" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="bulbassaur" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="blastoise" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="ponita" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="evee" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="bulbassaur" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="rapidash" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="lucario" width="100" alt="Card image cap">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="fundo.jpg" id="blastoise" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="geodude" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="geodude" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="squirtle" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="rapidash" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="evee" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="lucario" width="100" alt="Card image cap">
+            </div>
+            <div class="col">
+                <img src="fundo.jpg" id="ponita" width="100" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cartas = document.querySelector("#cartas");
+        let ponita = document.querySelector("#ponita");
+        let ponita2 = document.querySelector("#ponita2");
+        let evee = document.querySelector("#evee");
+        let evee2 = document.querySelector("#evee2");
+        let lucario = document.querySelector("#lucario");
+        let lucario2 = document.querySelector("#lucario2");
+        let rapidash = document.querySelector("#rapidash");
+        let rapidash2 = document.querySelector("#rapidash2");
+        let squirtle = document.querySelector("#squirtle");
+        let squirtle2 = document.querySelector("#squirtle2");
+        let geodude = document.querySelector("#geodude");
+        let geodude2 = document.querySelector("#geodude2");
+        let blastoise = document.querySelector("#blastoise");
+        let blastoise2 = document.querySelector("#blastoise2");
+        let bulbassaur = document.querySelector("#bulbassaur");
+        let bulbassaur2 = document.querySelector("#bulbassaur2");
+
+        function virarCarta(e){
+            if(e,target.id){
+
+            }
+        }
+
+        cartas.addEventListener("click", virarCarta);
+
+
+    </script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

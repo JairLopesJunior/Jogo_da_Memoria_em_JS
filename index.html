@@ -26,14 +26,17 @@
         .row{
             margin-bottom: 2vh;
         }
-        img{
-            transition: transform 0.8s;
+        #a{
+            transition: transform 0.8s; 
             transform-style: preserve-3d;
-        }
-
-        img:hover{
             transform: rotateY(180deg);
         }
+
+        #b{
+            transition: transform 0.8s; 
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+        } 
     </style>
 </head>
 <body>
@@ -45,7 +48,7 @@
     <div class="container" id="cartas" align="center">
         <div class="row">
             <div class="col">
-                <img src="fundo.jpg" id="squirtle" width="100" alt="Card image cap">
+                <img src="squirtle.png" id="a" width="100" alt="Card image cap">
             </div>
             <div class="col">
                 <img src="fundo.jpg" id="bulbassaur" width="100" alt="Card image cap">
@@ -60,7 +63,7 @@
                 <img src="fundo.jpg" id="evee" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="bulbassaur" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="bulbassaur2" width="100" alt="Card image cap">
             </div>
             <div class="col">
                 <img src="fundo.jpg" id="rapidash" width="100" alt="Card image cap">
@@ -71,28 +74,28 @@
         </div>
         <div class="row">
             <div class="col">
-                <img src="fundo.jpg" id="blastoise" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="blastoise2" width="100" alt="Card image cap">
             </div>
             <div class="col">
                 <img src="fundo.jpg" id="geodude" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="geodude" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="geodude2" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="squirtle" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="squirtle2" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="rapidash" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="rapidash2" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="evee" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="evee2" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="lucario" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="lucario2" width="100" alt="Card image cap">
             </div>
             <div class="col">
-                <img src="fundo.jpg" id="ponita" width="100" alt="Card image cap">
+                <img src="fundo.jpg" id="ponita2" width="100" alt="Card image cap">
             </div>
         </div>
     </div>
@@ -115,11 +118,151 @@
         let blastoise2 = document.querySelector("#blastoise2");
         let bulbassaur = document.querySelector("#bulbassaur");
         let bulbassaur2 = document.querySelector("#bulbassaur2");
+        let c = 0;
+        let x;
+
+        // function removerCss(e){
+        //     if(e.target.id === "squirtle"){
+        //         squirtle.parentElement.removeAttribute("id", "a");
+        //         squirtle.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "bulbassaur"){
+        //         bulbassaur.parentElement.removeAttribute("id", "a");
+        //         bulbassaur.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "ponita"){
+        //         ponita.parentElement.removeAttribute("id", "a");
+        //         ponita.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "evee"){
+        //         evee.parentElement.removeAttribute("id", "a");
+        //         evee.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "lucario"){
+        //         lucario.parentElement.removeAttribute("id", "a");
+        //         lucario.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "rapidash"){
+        //         rapidash.parentElement.removeAttribute("id", "a");
+        //         rapidash.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "geodude"){
+        //         geodude.parentElement.removeAttribute("id", "a");
+        //         geodude.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "blastoise"){
+        //         blastoise.parentElement.removeAttribute("id", "a");
+        //         blastoise.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "squirtle2"){
+        //         squirtle2.parentElement.removeAttribute("id", "a");
+        //         squirtle2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "bulbassaur2"){
+        //         bulbassaur2.parentElement.removeAttribute("id", "a");
+        //         bulbassaur2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "ponita2"){
+        //         ponita2.parentElement.removeAttribute("id", "a");
+        //         ponita2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "evee2"){
+        //         evee2.parentElement.removeAttribute("id", "a");
+        //         evee2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "lucario2"){
+        //         lucario2.parentElement.removeAttribute("id", "a");
+        //         lucario2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "rapidash2"){
+        //         rapidash2.parentElement.removeAttribute("id", "a");
+        //         rapidash2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "geodude2"){
+        //         geodude2.parentElement.removeAttribute("id", "a");
+        //         geodude2.parentElement.setAttribute("id", "b");
+        //     }else if(e.target.id === "blastoise2"){
+        //         blastoise2.parentElement.removeAttribute("id", "a");
+        //         blastoise2.parentElement.setAttribute("id", "b");
+        //     }
+        // }
+
+        function adicionarCss(e){
+            c++;
+            if(e.target.id === "squirtle"){
+                squirtle.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "bulbassaur"){
+                bulbassaur.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "ponita"){
+                ponita.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "evee"){
+                evee.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "lucario"){
+                lucario.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "rapidash"){
+                rapidash.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "geodude"){
+                geodude.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "blastoise"){
+                blastoise.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "squirtle2"){
+                squirtle2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "bulbassaur2"){
+                bulbassaur2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "ponita2"){
+                ponita2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "evee2"){
+                evee2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "lucario2"){
+                lucario2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "rapidash2"){
+                rapidash2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "geodude2"){
+                geodude2.parentElement.setAttribute("id", "a");
+            }else if(e.target.id === "blastoise2"){
+                blastoise2.parentElement.setAttribute("id", "a");
+            }
+
+            if(c === 2){
+                if((x === "squirtle" && e.target.id === "squirtle2") || (x === "squirtle2" && e.target.id === "squirtle")){
+                    setTimeout(function(){
+                        alert("Acertou mizeravi")
+                    }, 1000);
+                    c = 0;
+                }else{
+                    setTimeout(function(){
+                        squirtle.parentElement.removeAttribute("id", "a");
+                        squirtle.parentElement.setAttribute("id", "b");
+                        squirtle2.parentElement.removeAttribute("id", "a");
+                        squirtle2.parentElement.setAttribute("id", "b");
+                        bulbassaur.parentElement.removeAttribute("id", "a");
+                        bulbassaur.parentElement.setAttribute("id", "b");
+                        bulbassaur2.parentElement.removeAttribute("id", "a");
+                        bulbassaur2.parentElement.setAttribute("id", "b");
+                        ponita.parentElement.removeAttribute("id", "a");
+                        ponita.parentElement.setAttribute("id", "b");
+                        ponita2.parentElement.removeAttribute("id", "a");
+                        ponita2.parentElement.setAttribute("id", "b");
+                        evee.parentElement.removeAttribute("id", "a");
+                        evee.parentElement.setAttribute("id", "b");
+                        evee2.parentElement.removeAttribute("id", "a");
+                        evee2.parentElement.setAttribute("id", "b");
+                        lucario.parentElement.removeAttribute("id", "a");
+                        lucario.parentElement.setAttribute("id", "b");
+                        lucario2.parentElement.removeAttribute("id", "a");
+                        lucario2.parentElement.setAttribute("id", "b");
+                        rapidash.parentElement.removeAttribute("id", "a");
+                        rapidash.parentElement.setAttribute("id", "b");
+                        rapidash2.parentElement.removeAttribute("id", "a");
+                        rapidash2.parentElement.setAttribute("id", "b");
+                        geodude.parentElement.removeAttribute("id", "a");
+                        geodude.parentElement.setAttribute("id", "b");
+                        geodude2.parentElement.removeAttribute("id", "a");
+                        geodude2.parentElement.setAttribute("id", "b");
+                        blastoise.parentElement.removeAttribute("id", "a");
+                        blastoise.parentElement.setAttribute("id", "b");
+                        blastoise2.parentElement.removeAttribute("id", "a");
+                        blastoise2.parentElement.setAttribute("id", "b");
+                    }, 1500);
+                        c = 0;
+                }
+            }
+
+            x = e.target.id;
+        }
 
         function virarCarta(e){
-            if(e,target.id){
-
-            }
+            // setTimeout(function(){
+                
+            // }, 3000);
+            console.log(e.target.id)
+            adicionarCss(e);
         }
 
         cartas.addEventListener("click", virarCarta);
